@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vibecode": {
+      "type": "http",
+      "url": "https://api.vibecodeapp.com/mcp"
+    }
+  }
+}
