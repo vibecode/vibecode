@@ -2,7 +2,7 @@
   "name": "vibecode",
   "displayName": "Vibecode",
   "version": "1.0.0",
-  "description": "Build iPhone apps and web apps by chatting. Vibecode's agent writes, builds and tests them; follow a build, ask for changes, and look inside an app when something isn't working.",
+  "description": "Build iPhone apps and web apps by chatting. Vibecode's agent writes, builds and tests them and makes the changes you ask for. When an app is ready, put it on your iPhone or publish it to the App Store with Vibecode.",
   "author": {
     "name": "Vibecode",
     "email": "support@vibecodeapp.com"
