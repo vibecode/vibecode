@@ -1,0 +1,15 @@
+{
+  "name": "vibecode",
+  "description": "The Vibecode plugin: build and change iPhone apps and web apps from Claude Code.",
+  "owner": {
+    "name": "Vibecode",
+    "email": "support@vibecodeapp.com"
+  },
+  "plugins": [
+    {
+      "name": "vibecode",
+      "source": "./",
+      "description": "Build and change iPhone apps and web apps by chatting, then put them online."
+    }
+  ]
+}

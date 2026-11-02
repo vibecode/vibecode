@@ -1,0 +1,10 @@
+{
+  "name": "vibecode",
+  "version": "1.0.0",
+  "description": "Build iPhone apps and web apps by chatting. Vibecode's agent writes, builds and tests them.",
+  "mcpServers": {
+    "vibecode": {
+      "httpUrl": "https://api.vibecodeapp.com/mcp"
+    }
+  }
+}

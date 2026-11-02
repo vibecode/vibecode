@@ -1,0 +1,29 @@
+{
+  "name": "vibecode",
+  "displayName": "Vibecode",
+  "version": "1.0.0",
+  "description": "Build iPhone apps and web apps by chatting. Vibecode's agent writes, builds and tests them and makes the changes you ask for. When an app is ready, put it online, on your iPhone or in the App Store with Vibecode.",
+  "author": {
+    "name": "Vibecode",
+    "email": "support@vibecodeapp.com",
+    "url": "https://www.vibecodeapp.com"
+  },
+  "homepage": "https://www.vibecodeapp.com/docs/guides/vibecode-mcp",
+  "repository": "https://github.com/vibecode/vibecode",
+  "license": "MIT",
+  "keywords": [
+    "vibecode",
+    "app-builder",
+    "iphone",
+    "ios",
+    "web-app",
+    "no-code",
+    "mcp"
+  ],
+  "mcpServers": "./mcp.json",
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://www.vibecodeapp.com/docs/guides/vibecode-mcp",
+  "supportUrl": "https://github.com/vibecode/vibecode/issues",
+  "privacyPolicyUrl": "https://www.vibecodeapp.com/privacy",
+  "termsOfServiceUrl": "https://www.vibecodeapp.com/terms"
+}

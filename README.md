@@ -1,8 +1,10 @@
 # Vibecode
 
+[![skills.sh](https://skills.sh/b/vibecode/vibecode)](https://skills.sh/vibecode/vibecode)
+
 [Vibecode](https://www.vibecodeapp.com) builds iPhone apps and web apps from a description. Vibecode's agent writes the app, builds it and tests it.
 
-This repository holds the Vibecode plugin for Grok Bot, and it's where you can report Vibecode bugs and request features.
+This repository holds the Vibecode plugin for Grok Bot, Claude Code and Gemini CLI, and it's where you can report Vibecode bugs and request features. Any other MCP app can connect to `https://api.vibecodeapp.com/mcp` directly ([setup guides](https://www.vibecodeapp.com/docs/guides/vibecode-mcp)).
 
 ## The Vibecode plugin
 
@@ -10,7 +12,11 @@ Build and change apps by chatting. From the chat you can follow a build, ask for
 
 ### Getting started
 
-1. Install the Vibecode plugin and select **Connect**.
+1. Install the Vibecode plugin:
+   - **Grok Bot:** install Vibecode from the plugin marketplace and select **Connect**.
+   - **Claude Code:** run `/plugin install vibecode --marketplace vibecode/vibecode`, then `/mcp` and select **vibecode** to sign in.
+   - **Gemini CLI:** run `gemini extensions install https://github.com/vibecode/vibecode`, then `/mcp auth vibecode` inside Gemini CLI.
+   - **The skill alone**, for any agent that reads skills: `npx skills add vibecode/vibecode`. It needs the Vibecode MCP server connected too.
 2. Sign in to Vibecode (or create an account with Google or Apple) and allow access.
 3. Ask for an app, for example: "Build me an iPhone app to log how much water I drink each day."
 
@@ -32,9 +38,12 @@ Creating an account and connecting is free, and a new account's first app build 
 
 ### What's in the plugin
 
-- `.cursor-plugin/plugin.json`: the plugin's manifest.
+- `.cursor-plugin/plugin.json`: the Grok Bot plugin's manifest.
+- `.claude-plugin/plugin.json` and `.claude-plugin/marketplace.json`: the Claude Code plugin and the marketplace that lists it.
+- `gemini-extension.json`: the Gemini CLI extension.
+- `server.json`: the Vibecode server's entry in the [MCP Registry](https://registry.modelcontextprotocol.io).
 - `mcp.json`: the Vibecode server, `https://api.vibecodeapp.com/mcp`. Sign-in uses OAuth with your Vibecode account; no keys are stored in the plugin.
-- `skills/vibecode`: how to use the tools well.
+- `skills/vibecode`: how to use the tools well. Every plugin above includes it.
 
 ## Bugs and feature requests
 

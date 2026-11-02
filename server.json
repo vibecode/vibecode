@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.vibecodeapp/vibecode",
+  "title": "Vibecode",
+  "description": "Build native iPhone apps and web apps by chatting. Vibecode's agent writes, builds and tests them.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.vibecodeapp.com/docs/guides/vibecode-mcp",
+  "repository": {
+    "url": "https://github.com/vibecode/vibecode",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/vibecode/vibecode/main/assets/logo.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.vibecodeapp.com/mcp"
+    }
+  ]
+}
