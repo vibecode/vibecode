@@ -23,6 +23,7 @@ Every app you build lives in your Vibecode account, so you can keep working on i
 - **Look inside:** read an app's logs (also its published backend's), its files and its latest screenshot, or run a command in its workspace. Keys are hidden from everything the chat sees.
 - **Versions:** list an app's saved versions and bring an earlier one back. Later versions are kept.
 - **Manage apps:** list, rename, duplicate or delete your apps.
+- **Put it online:** deploy an app so anyone can use it, give a web app its `vibecode.run` address or connect your own domain, and password-protect it. Deploying never starts a charge from the chat: when it would cost more than your plan includes, you get a link to deploy in Vibecode.
 - **Keep going elsewhere:** get links to open an app in Vibecode, on your iPhone, or to publish it to the App Store.
 
 ### Plans and credits

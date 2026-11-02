@@ -21,8 +21,15 @@ Vibecode's agent writes, builds and tests apps in the user's Vibecode account. T
 ## When something isn't working
 - `get_logs` reads the app's logs: the workspace's while it runs, or the published backend's (`where: live`).
 - `list_files` and `read_file` show the app's code. `.env` files can't be read, and keys in any output are hidden.
-- `run_command` runs a command in the app's workspace and stops after 60 seconds. Use it to look, not to change the app: changes go through `edit_app`, so Vibecode's agent makes and tests them.
+- `run_command` runs a command in the app's workspace and stops after 45 seconds. Use it to look, not to change the app: changes go through `edit_app`, so Vibecode's agent makes and tests them.
 - `get_screenshot` shows the app's latest screenshot.
+
+## Deploying
+- `get_deployment` says whether the app is live and at what address, whether its server is answering, whether newer saved versions aren't live yet, and why the last deploy failed.
+- `deploy_app` puts the app's latest saved version online, like Vibecode's Deploy button: a web app's site, or the server behind a mobile or iPhone app. It never starts a charge: when deploying would cost money, it deploys nothing and returns a link to do it in Vibecode, so pass that on. After it starts, call `get_deployment` to see when it's live.
+- `set_address` gives a web app its name.vibecode.run address (chosen once) or connects the user's own domain: it returns the DNS records to add, and calling again with the same domain checks them.
+- `set_web_password` turns password protection of a web app's site on or off. It takes effect at the next deploy. Ask the user for the username and password; never make one up.
+- To put an earlier version live, `restore_version` first, then `deploy_app`.
 
 ## Versions
 - `list_versions` lists the app's saved versions.
