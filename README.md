@@ -26,15 +26,26 @@ Every app you build lives in your Vibecode account, so you can keep working on i
 
 - **Build and change apps:** describe a new app, or ask for a new screen, a different color or a fix in one you've built. The chat waits for the build and tells you when it's ready.
 - **Follow the agent:** see what Vibecode's agent did, why a build failed, or stop it.
-- **Look inside:** read an app's logs (also its published backend's), its files and its latest screenshot, or run a command in its workspace. Keys are hidden from everything the chat sees.
+- **Look inside:** read an app's logs (also its published backend's), its files and its latest screenshot. Keys are hidden from everything the chat sees, and `.env` files can't be read.
+- **Run commands:** run tests, install a package or make a small fix in an app's workspace, and on a paid plan run a command on the live app's server, which backs up its database first. Commands are for Claude Code, Codex, Gemini CLI, Grok Bot and other coding agents; ChatGPT and Claude don't have them.
 - **Versions:** list an app's saved versions and bring an earlier one back. Later versions are kept.
 - **Manage apps:** list, rename, duplicate or delete your apps.
-- **Put it online:** deploy an app so anyone can use it, give a web app its `vibecode.run` address or connect your own domain, and password-protect it. Deploying never starts a charge from the chat: when it would cost more than your plan includes, you get a link to deploy in Vibecode.
+- **Put it online:** deploy an app so anyone can use it, give a web app its `vibecode.run` address or connect your own domain, and password-protect it. A deploy first saves any edits made in the workspace as a new version. Deploying never starts a charge from the chat: when it would start a trial or a charge, you get a link to see the price and confirm (on Free, a link to the plans).
 - **Keep going elsewhere:** get links to open an app in Vibecode, on your iPhone, or to publish it to the App Store.
 
 ### Plans and credits
 
 Creating an account and connecting is free, and a new account's first app build is free. After that, builds and changes use Vibecode credits, which you manage on [vibecodeapp.com](https://www.vibecodeapp.com). Nothing is sold in the chat.
+
+Commands in an app's workspace (`run_command`):
+
+| | Free | Plus, Pro and Max |
+| --- | --- | --- |
+| Commands | 50 a week, reset every Monday at 00:00 UTC | No weekly limit |
+| How long a command runs | Stops after 45 seconds | Up to 20 minutes, followed with `get_command_output` |
+| Commands on the live server (`run_live_command`) | No | Yes |
+
+A command can be up to 20,000 characters. [Commands in Coding Tools](https://www.vibecodeapp.com/docs/guides/vibecode-mcp#commands-in-coding-tools) has the details.
 
 ### What's in the plugin
 
